@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap');
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+body{
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.cont{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap ;
+    
+}
+header{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #d9dfd8;
+    padding: 0px 15px;
+}
+header .row{
+    justify-content: space-between ;
+    align-items: center;
+}
+header .brand-name a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header .navbar ul{
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 72px;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+}
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom:  -1px;
+    transition: all .5s ease;
+}
+header .navbar ul li a:hover::before{
+    width:100%;
+    left: 0;
+}
+header .navbar ul li a.active::before{
+    width:100%;
+    left: 0;
+}
+.home{
+   animation: animate 6s ease-in-out infinite;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   padding: 15px;
+   
+}
+
+@keyframes animate{
+    0%,100%{
+        background-image: url(img/1.jpg) ;
+    }
+    25%{
+        background-image: url(img/2.jpg);
+    }
+    50%{
+        background-image: url(img/3.jpg);
+    }
+    75%{
+        background-image: url(img/4.jpg);
+    }
+}
+
+.home .full{
+    min-height: 100vh;
+}
+
+.home .home-content{
+    flex: 0 0  100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.block{
+    margin-left: 120vh;
+}
+
+.home .home-content .block{
+    flex: 0 0 75%;
+    /* max-width: 75%; */
+    padding-left: 35px;
+    border-left:5px solid #fff ;
+    opacity: 0;
+    animation: captionText .5s ease forwards;
+    animation-delay:1s ;
+}
+@keyframes captionText{
+    0%{
+        opacity: 0;transform: translateX(-100px)
+    }
+    100%{
+        opacity: 1;transform: translateX(0px);
+    }
+}
+
+.home .home-content .block h6{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    
+}
+.home .home-content .block h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 ;
+    padding: 0;
+   
+}
+.home .home-content .block h3{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    
+}
+.home .home-content .block .cv-btn{
+    padding-top:20px ;
+}
+
+.home .home-content .block .cv-btn a{
+    border-radius:4px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+    background-color: transparent;
+}
+.home .home-content .block .cv-btn a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* body{
+    font-family: monospace;
+} */
+
+
